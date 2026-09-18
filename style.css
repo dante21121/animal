@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    overflow: hidden;
+    background: #111827;
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+#game {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(
+        to bottom,
+        #62c9ff 0%,
+        #a9e4ff 55%,
+        #dff6ff 100%
+    );
+}
+
+#gameCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#top-ui {
+    position: absolute;
+    z-index: 10;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    pointer-events: none;
+}
+
+.stat {
+    min-width: 90px;
+    padding: 9px 13px;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #64748b;
+}
+
+.stat strong {
+    display: block;
+    margin-top: 2px;
+
+    font-size: 19px;
+    color: #172033;
+}
+
+#restart {
+    pointer-events: auto;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.8);
+
+    font-size: 24px;
+    color: #172033;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+
+    cursor: pointer;
+}
+
+#next-animal {
+    position: absolute;
+    z-index: 10;
+
+    top: 92px;
+    left: 18px;
+
+    width: 80px;
+    padding: 8px;
+
+    text-align: center;
+
+    border-radius: 15px;
+
+    background: rgba(255,255,255,0.68);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+#next-animal span {
+    display: block;
+
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    color: #64748b;
+}
+
+#next-icon {
+    margin-top: 3px;
+    font-size: 30px;
+}
+
+#bottom-ui {
+    position: absolute;
+    z-index: 10;
+
+    left: 50%;
+    bottom: 24px;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    pointer-events: none;
+}
+
+#animal-name {
+    display: inline-block;
+
+    padding: 8px 17px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.78);
+    backdrop-filter: blur(10px);
+
+    font-size: 15px;
+    font-weight: 800;
+    color: #172033;
+}
+
+#instruction {
+    margin-top: 7px;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+
+    color: rgba(20,45,65,0.7);
+}
+
+#game-over {
+    position: absolute;
+    z-index: 50;
+
+    inset: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(12, 24, 38, 0.48);
+    backdrop-filter: blur(8px);
+}
+
+#game-over.visible {
+    display: flex;
+}
+
+.game-over-box {
+    width: min(340px, calc(100vw - 40px));
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.95);
+
+    box-shadow: 0 20px 70px rgba(0,0,0,0.25);
+
+    text-align: center;
+}
+
+.game-over-box h1 {
+    margin-bottom: 25px;
+
+    font-size: 27px;
+    color: #172033;
+}
+
+.final-stat {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 10px 0;
+    padding: 12px 15px;
+
+    border-radius: 12px;
+
+    background: #eef3f7;
+
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.final-stat strong {
+    color: #172033;
+    font-size: 17px;
+}
+
+#play-again {
+    width: 100%;
+
+    margin-top: 18px;
+    padding: 14px;
+
+    border: none;
+    border-radius: 13px;
+
+    background: #172033;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+@media (min-width: 700px) {
+    #top-ui {
+        left: 30px;
+        right: 30px;
+    }
+
+    #next-animal {
+        left: 30px;
+    }
+}
