@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Animal Stack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game">
+
+        <div id="top-ui">
+            <div class="stat">
+                <span>PUNTOS</span>
+                <strong id="score">0</strong>
+            </div>
+
+            <div class="stat">
+                <span>ALTURA</span>
+                <strong id="height">0 m</strong>
+            </div>
+
+            <button id="restart">↻</button>
+        </div>
+
+        <div id="next-animal">
+            <span>PRÓXIMO</span>
+            <div id="next-icon">🐶</div>
+        </div>
+
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="bottom-ui">
+            <div id="animal-name">Preparando...</div>
+            <div id="instruction">TOCÁ PARA SOLTAR</div>
+        </div>
+
+        <div id="game-over">
+            <div class="game-over-box">
+                <h1>TORRE CAÍDA</h1>
+
+                <div class="final-stat">
+                    <span>PUNTOS</span>
+                    <strong id="final-score">0</strong>
+                </div>
+
+                <div class="final-stat">
+                    <span>ALTURA</span>
+                    <strong id="final-height">0 m</strong>
+                </div>
+
+                <button id="play-again">JUGAR DE NUEVO</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+    <script src="game.js"></script>
+
+</body>
+</html>
